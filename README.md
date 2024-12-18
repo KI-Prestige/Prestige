@@ -12,3 +12,11 @@ Cleaning the data
 Analyzing the data
 Preprocessing the data
 Building a model
+
+If after replacing spurious values from the obsevations with nan the features do not automatically change to float type run the following code to manually change the affected features to float type![Screenshot (2)](https://github.com/user-attachments/assets/4da65e98-2cff-4915-9cc2-77d6d286e663)
+:
+
+feat= data[['word_freq_our', 'word_freq_000', 'word_freq_hpl', 'word_freq_labs']]
+
+for col in feat:
+    data[col]= data[col].astype(float)
